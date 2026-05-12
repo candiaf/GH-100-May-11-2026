@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time Display</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">⏰ Date & Time Display</span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-fluid main-container">
+        <div class="row h-100">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <div class="card shadow-lg">
+                    <div class="card-body text-center">
+                        <!-- Date Display -->
+                        <div class="mb-4">
+                            <h5 class="text-muted mb-2">📅 Today's Date</h5>
+                            <h2 class="display-4 text-primary" id="dateDisplay">
+                                <%= date %>
+                            </h2>
+                        </div>
+
+                        <!-- Divider -->
+                        <hr class="my-4">
+
+                        <!-- Time Display -->
+                        <div class="mb-4">
+                            <h5 class="text-muted mb-2">🕐 Current Time</h5>
+                            <h2 class="display-4 text-success" id="timeDisplay">
+                                <%= time %>
+                            </h2>
+                            <small class="text-muted">Updates automatically every second</small>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="mt-4">
+                            <button class="btn btn-primary btn-lg" onclick="refreshDateTime()">
+                                🔄 Refresh Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/script.js"></script>
+</body>
+</html>
